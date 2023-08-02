@@ -13,14 +13,23 @@ export default function Header() {
   const ref = useRef(null)
   
   const handleResize = () => {
-    setViewportWidth(window.innerWidth)
+    if(window !== undefined){
+      setViewportWidth(window.innerWidth)
+    }
+    
   }
 
   useEffect(() => {
-    window.addEventListener('resize', handleResize)
+    if(window !== undefined){
+      window.addEventListener('resize', handleResize)
+    }
+    
 
     return () => {
-      window.removeEventListener('resize', handleResize)
+      if(window !== undefined){
+        window.removeEventListener('resize', handleResize)  
+      }
+      
     }
   }, [])
 
