@@ -8,7 +8,7 @@ import Link from 'next/link'
 export default function Header() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [viewportWidth, setViewportWidth] = useState(window.innerWidth)
+  const [viewportWidth, setViewportWidth] = useState('')
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef(null)
   
