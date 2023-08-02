@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/moon.css');
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -10,18 +12,138 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --blue:#3a0ca3;
+    --purple:#7209b7;
+    --white:#e7ecef;
+    --pink:#f72585
+
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+
+body {
+  line-height: 1.5;  
+}
+html{
+  scroll-behavior: smooth !important;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.fade{
+  animation: Fade 900ms ease;
+}
+.flick{
+  animation: Flick 500ms ease-in-out ;
+}
+.down{
+  animation: Down 500ms ease-in-out;
+}
+
+
+@keyframes Fade {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+
+@keyframes Flick {
+  0%{
+  transform: translateX(-500px);
+  }
+  100%{
+    transform: translateX(0);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes Down {
+  0%{
+    transform: translateY(5rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+.bs-header {
+  box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 1);
+}
+
+.bo{  
+  outline: 0;
+}
+
+.pers{
+  transform: perspective(1000px) rotateY(25deg); 
+}
+.card-box{
+    perspective: 1000px;
+}
+.card{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.5s ease-in-out;
+  transform-style: preserve-3d;
+}
+.card-box:hover .card{
+  transform: rotateY(180deg);
+}
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.back{
+  background-color: transparent;
+  transform: rotateY(180deg);
+  height: 90%;
+}
+.before{
+  height: 43.2px;
+}
+.about-text{
+  word-spacing: 0.1rem;
+}
+::selection{
+  background-color: #444444;
+}
+.menu-active{
+  overflow: hidden;
+}
+.iam{
+  margin-bottom: -4.5rem;
+}
+.person{
+  margin-top: -3rem;
+}
+.input-shadow{
+  box-shadow: 0px 0px 2px 0px rgba(68, 68, 68, 1);
 }
