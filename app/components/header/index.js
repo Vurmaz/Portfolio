@@ -13,20 +13,20 @@ export default function Header() {
   const ref = useRef(null)
   
   const handleResize = () => {
-    if(window !== undefined){
+    if(typeof window !== "undefined"){
       setViewportWidth(window.innerWidth)
     }
     
   }
 
   useEffect(() => {
-    if(window !== undefined){
+    if(typeof window !== "undefined"){
       window.addEventListener('resize', handleResize)
     }
     
 
     return () => {
-      if(window !== undefined){
+      if(typeof window !== "undefined"){
         window.removeEventListener('resize', handleResize)  
       }
       
@@ -35,7 +35,7 @@ export default function Header() {
 
   useEffect(()=>{
     if(viewportWidth > 640){
-      if(window !== undefined){
+      if(typeof window !== "undefined"){
         window.document.body.classList.remove('menu-active')
       }
       
@@ -44,14 +44,14 @@ export default function Header() {
 
   useEffect(()=>{
     if(isMenuOpen){
-      if(window !== undefined){
+      if(typeof window !== "undefined"){
         window.document.body.classList.add('menu-active')
       }
       
     }
 
     return(()=>{
-      if(window !== undefined){
+      if(typeof window !== "undefined"){
         window.document.body.classList.remove('menu-active')
       }
       
