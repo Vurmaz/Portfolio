@@ -35,17 +35,26 @@ export default function Header() {
 
   useEffect(()=>{
     if(viewportWidth > 640){
-      window.document.body.classList.remove('menu-active')
+      if(window !== undefined){
+        window.document.body.classList.remove('menu-active')
+      }
+      
     }
   }, [viewportWidth])
 
   useEffect(()=>{
     if(isMenuOpen){
-      window.document.body.classList.add('menu-active')
+      if(window !== undefined){
+        window.document.body.classList.add('menu-active')
+      }
+      
     }
 
     return(()=>{
-      window.document.body.classList.remove('menu-active')
+      if(window !== undefined){
+        window.document.body.classList.remove('menu-active')
+      }
+      
     })
     
   }, [isMenuOpen])
