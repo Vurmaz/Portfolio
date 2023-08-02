@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { animate, motion } from 'framer-motion'
 import Link from 'next/link'
 
-export default function Header() {
+export default function Header() {  
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [viewportWidth, setViewportWidth] = useState('')
@@ -13,48 +13,34 @@ export default function Header() {
   const ref = useRef(null)
   
   const handleResize = () => {
-    if(typeof window !== "undefined"){
+    if (typeof window !== "undefined") {
       setViewportWidth(window.innerWidth)
     }
-    
   }
 
   useEffect(() => {
-    if(typeof window !== "undefined"){
-      window.addEventListener('resize', handleResize)
-    }
     
+    setViewportWidth(window.innerWidth)
+    window.addEventListener('resize', handleResize)
 
     return () => {
-      if(typeof window !== "undefined"){
-        window.removeEventListener('resize', handleResize)  
-      }
-      
+      window.removeEventListener('resize', handleResize)
     }
   }, [])
 
   useEffect(()=>{
     if(viewportWidth > 640){
-      if(typeof window !== "undefined"){
-        window.document.body.classList.remove('menu-active')
-      }
-      
+      window.document.body.classList.remove('menu-active')
     }
   }, [viewportWidth])
 
   useEffect(()=>{
     if(isMenuOpen){
-      if(typeof window !== "undefined"){
-        window.document.body.classList.add('menu-active')
-      }
-      
+      window.document.body.classList.add('menu-active')
     }
 
     return(()=>{
-      if(typeof window !== "undefined"){
-        window.document.body.classList.remove('menu-active')
-      }
-      
+      window.document.body.classList.remove('menu-active')
     })
     
   }, [isMenuOpen])
@@ -68,7 +54,7 @@ export default function Header() {
     })
     
   }, [isHovered])
-  
+
   return (
     <div className={`bg-black w-full flex justify-between fixed w-full z-50 p-2 px-4 text-white bt-2 bs-header`}>
       <Link href='#home'>
