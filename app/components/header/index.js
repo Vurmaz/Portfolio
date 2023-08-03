@@ -12,23 +12,22 @@ export default function Header() {
   const [isHovered, setIsHovered] = useState(false)
   const ref = useRef(null)
   
-  const handleResize = () => {
-    if (process.browser) {
-      setViewportWidth(window.innerWidth)
-    }
-  }
+
 
   useEffect(() => {
-    
-    if (process.browser) {
-      setViewportWidth(window.innerWidth)
-    }
+    const handleResize = () => {
+        setViewportWidth(window.innerWidth)
+    }    
+
     window.addEventListener('resize', handleResize)
 
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+  useEffect(()=>{
+    setViewportWidth(window.innerWidth)
+  },[])
 
   useEffect(()=>{
     if(viewportWidth > 640){
