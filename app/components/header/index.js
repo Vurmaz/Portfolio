@@ -13,7 +13,6 @@ export default function Header() {
   const ref = useRef(null)
   
 
-
   useEffect(() => {
     const handleResize = () => {
         setViewportWidth(window.innerWidth)
@@ -26,17 +25,18 @@ export default function Header() {
     }
   }, [])
   useEffect(()=>{
+
     setViewportWidth(window.innerWidth)
   },[])
 
   useEffect(()=>{
-    if(viewportWidth > 640){
+    if(viewportWidth > 640){   
       window.document.body.classList.remove('menu-active')
     }
   }, [viewportWidth])
 
   useEffect(()=>{
-    if(isMenuOpen){
+    if(isMenuOpen){       
       window.document.body.classList.add('menu-active')
     }
 
