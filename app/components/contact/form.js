@@ -51,7 +51,7 @@ export default function FormComponent() {
           <Form.Submit  asChild className='w-full mt-8 flex relative' >            
               <div className='flex justify-center'> 
                 <motion.button 
-                  className='mx-auto border-2 text-white border-red w-1/2 py-2 px-4 relative z-10' 
+                  className='mx-auto text-white  w-1/2 py-2 px-4 relative z-10' 
                   onHoverStart={ani} 
                   onHoverEnd={aniCancel}                                                  
                 >
