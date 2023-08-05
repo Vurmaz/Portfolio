@@ -19,7 +19,7 @@ export default function Card(props) {
     }
 
     const container = useRef(null)
-
+    
     const { scrollYProgress } = useScroll({ target:container, offset:['start start', 'end start'] })
 
     let y = useTransform(scrollYProgress, [0, 1], [0, 100])      
@@ -33,24 +33,9 @@ export default function Card(props) {
     
     useEffect(() => {
         const divHeight = ref2.current.clientHeight
-        setDivHeight(divHeight)       
-
-        const getImageHeight = () => {
-            if(ref1.current) {
-               const imgHeight = ref1.current.clientHeight 
-               setImgHeight(imgHeight)
-            }            
-        }
-
-        if(ref1.current){
-          ref1.current.addEventListener('load', getImageHeight)  
-        }
-
-        return(() => {
-            if(ref1.current){
-                ref1.current.removeEventListener('load', getImageHeight)  
-            } 
-        })
+        setDivHeight(divHeight)           
+        const height1 = ref1.current.clientHeight
+        setImgHeight(height1)       
     }, [])
     
   return (
