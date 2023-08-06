@@ -7,15 +7,15 @@ export default function Principles() {
       let array = [
     {
       title:'Hard worker',
-      url:'computer.png'
+      url:'computer.webp'
     },
     {
       title:'Flexible',    
-      url:'flex.png',  
+      url:'flex.webp',  
     },
     {
       title:'Active',
-      url:'comm.png'
+      url:'comm.webp'
     }
   ]
 
