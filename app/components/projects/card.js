@@ -52,7 +52,7 @@ export default function Card(props) {
         <div className='card pointer-events-none'>
             <div  className='front'>           
                 <h1 className='p-2 text-xs sm:text-sm md:text-base'>{props.project.name}</h1>
-                <img ref={ref1} src={`/${props.project.name}.png`} className='w-full img-cont' />
+                <img ref={ref1} src={`/${props.project.name}.png`} alt={props.project.name} className='w-full img-cont' />
                 <div ref={ref2}>
                     <p className='text-xs md:text-sm lg:text-base w-7/12 mx-auto text-center p-4'>
                         {props.project.desc}
@@ -61,7 +61,7 @@ export default function Card(props) {
                 </div>
             <div className='back'>
                 <h1 className='p-2 text-xs sm:text-sm md:text-base'>{props.project.name}</h1>
-                <img src={`/${props.project.name}.gif`} />
+                <img src={`/${props.project.name}.gif`} alt={props.project.name} />
                 <div className=''>
                     <motion.div className='flex gap-4 justify-center p-8'>
                         <CardButton text={'CODE'} url={props.project.github} />

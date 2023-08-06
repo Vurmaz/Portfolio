@@ -10,7 +10,7 @@ export default function Imgbox({ index, item }) {
       className='flex flex-col gap-4 justify-center items-center w-full'
     >
         <h1 className='text-xs md:text-sm'>{item.title}</h1>
-        <img src={`/${item.url}`} className='w-full h-auto' />          
+        <img src={`/${item.url}`} className='w-full h-auto' alt={item.title} />          
     </motion.div>  
   )
 }
