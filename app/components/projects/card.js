@@ -61,7 +61,8 @@ export default function Card(props) {
                 </div>
             <div className='back'>
                 <h1 className='p-2 text-xs sm:text-sm md:text-base'>{props.project.name}</h1>
-                <img loading='lazy' src={`/${props.project.name}.gif`} alt={props.project.name} />
+                
+                <video src={`/${props.project.name}.mp4`} autoPlay loop muted />
                 <div className=''>
                     <motion.div className='flex gap-4 justify-center p-8'>
                         <CardButton text={'CODE'} url={props.project.github} />
