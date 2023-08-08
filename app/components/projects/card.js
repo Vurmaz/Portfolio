@@ -7,10 +7,11 @@ export default function Card(props) {
 
     const ref1 = useRef(null)
     const ref2 = useRef(null)
+    const videoRef = useRef(null)
 
     const [imgHeight, setImgHeight] = useState(null)
     const [divHeight, setDivHeight] = useState(null)
-
+     
     const detectHeight = () => {
         const height1 = ref1.current.clientHeight
         const height2 =  ref2.current.clientHeight        
@@ -35,7 +36,8 @@ export default function Card(props) {
         const divHeight = ref2.current.clientHeight
         setDivHeight(divHeight)           
         const height1 = ref1.current.clientHeight
-        setImgHeight(height1)       
+        setImgHeight(height1)  
+        videoRef.current.pause()    
     }, [])
     
   return (
@@ -47,10 +49,12 @@ export default function Card(props) {
             whileInView={{ x:0, opacity:1 }}
             viewport={{ once:true }}
             transition={{ duration:0.5, delay:0.5 }} 
-            ref={container}          
+            ref={container}   
+            onHoverStart={()=>videoRef.current.play()}
+            onHoverEnd={()=>videoRef.current.pause()}       
         >  
         <div className='card pointer-events-none'>
-            <div  className='front'>           
+            <div className='front'>           
                 <h1 className='p-2 text-xs sm:text-sm md:text-base'>{props.project.name}</h1>
                 <img ref={ref1} src={`/${props.project.name}.webp`} alt={props.project.name} className='w-full img-cont' />
                 <div ref={ref2}>
@@ -62,7 +66,7 @@ export default function Card(props) {
             <div className='back'>
                 <h1 className='p-2 text-xs sm:text-sm md:text-base'>{props.project.name}</h1>
                 
-                <video src={`/${props.project.name}.mp4`} autoPlay loop muted />
+                <video ref={videoRef} src={`/${props.project.name}.mp4`} autoPlay loop muted />
                 <div className=''>
                     <motion.div className='flex gap-4 justify-center p-8'>
                         <CardButton text={'CODE'} url={props.project.github} />

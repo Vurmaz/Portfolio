@@ -8,7 +8,7 @@ export default function MessageField({ setData, data }) {
     <>
         <Form.Field className='mt-8'>
             <motion.div
-                initial={{ y:200, opacity:0 }}
+                initial={{ y:50, opacity:0 }}
                 whileInView={{ y:0, opacity:1 }}
                 viewport={{ once: true }}
                 transition={{ duration:0.7, delay:0.3 }}

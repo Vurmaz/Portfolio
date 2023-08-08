@@ -23,7 +23,7 @@ useEffect(() => {
                     return (
                       <motion.div 
                         key={index}
-                        initial={{ x:-400, opacity:0 }}
+                        initial={{ x:-100, opacity:0 }}
                         className='fr'                       
                       > 
                         <Tree item={item} />

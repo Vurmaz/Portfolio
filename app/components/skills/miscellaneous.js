@@ -28,7 +28,7 @@ useEffect(() => {
                   return (
                     <motion.div
                       key={item._id}
-                      initial={{ x:400, opacity:0 }}
+                      initial={{ x:100, opacity:0 }}
                       className='mi' 
                     >
                       <Tree item={item} />  

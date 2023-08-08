@@ -3,7 +3,7 @@ import * as Form from '@radix-ui/react-form';
 import NameField from './nameField';
 import EmailField from './emailField';
 import MessageField from './messageField';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { AiOutlineClose } from 'react-icons/ai'
 import { useState } from 'react';
 import axios from 'axios';
@@ -30,14 +30,7 @@ export default function FormComponent() {
       email:'',
       message:'' 
     })
-    await setIsOpen(true)
-  }
-
-  const ani = () => {
-    animate('.before', { opacity:1, width:'25%' }, { duration:1 })
-  }
-  const aniCancel = ()=> {
-    animate('.before', { opacity:0, width:'0' }, { duration:1 })
+    setIsOpen(true)
   }
   
   return (  
@@ -51,15 +44,13 @@ export default function FormComponent() {
           <Form.Submit  asChild className='w-full mt-8 flex relative' >            
               <div className='flex justify-center'> 
                 <motion.button 
-                  className='mx-auto text-white  w-1/2 py-2 px-4 relative z-10' 
-                  onHoverStart={ani} 
-                  onHoverEnd={aniCancel}                                                  
+                  className='mx-auto text-white w-max py-2 px-4 relative z-10' 
+                  initial={{ backgroundColor:'#171717' }}
+                  whileHover={{ backgroundColor:'#DA0037' }}
+                  transition={{ duration:0.7, ease:'easeInOut' }}                                                 
                 >
                   Send Me Message
                 </motion.button>  
-                <motion.div 
-                  className='w-1/2 bg-red absolute before opacity-0 pointer-events-none'
-                ></motion.div>
               </div>
           </Form.Submit>
       </Form.Root>
