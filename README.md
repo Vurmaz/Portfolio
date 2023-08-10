@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Full Stack Personal Portfolio
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Introduction
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Welcome to my Personal Portfolio Full Stack Project, where I showcase my skills, projects, and journey as a full-stack developer. This project demonstrates my evolution as a web developer as well as my technical proficiency and creativity.
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+![App Screenshot](https://i.imgur.com/Z6QreX9.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Description
 
-## Deploy on Vercel
+🌐 Interactive Showcase: This portfolio goes beyond a simple resume. It's an interactive platform where you can explore my projects, learn about my skill set, and understand the experiences that have shaped my career.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🎨 Design: Design matters just as much as code. I inspired my design from old dark comics. Used Playground AI for creative and classy images. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🧰 Full-Stack Proficiency: As a full-stack developer, I've crafted engaging front-end interfaces using modern frameworks and built powerful back-ends to support these interfaces.
+
+🔗 Project Showcases: Discover the diversity of my projects, from web applications and responsive websites. Each project represents a unique challenge and an opportunity for growth.
+
+## Built with
+
+Next.js, 
+Framer motion, 
+TailwindCSS, 
+RadixUI
+
+
+
+## Performance
+
+![App Screenshot](https://i.imgur.com/rVmCTAR.png)
+## License
+
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
