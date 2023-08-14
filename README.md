@@ -1,43 +1,37 @@
 
-# Full Stack Personal Portfolio
+# Odinbook Client
 
 
 
 
 ## Introduction
 
-Welcome to my Personal Portfolio Full Stack Project, where I showcase my skills, projects, and journey as a full-stack developer. This project demonstrates my evolution as a web developer as well as my technical proficiency and creativity.
-
-## Screenshots
-
-![App Screenshot](https://i.imgur.com/Z6QreX9.png)
-
-
-## Description
-
-🌐 Interactive Showcase: This portfolio goes beyond a simple resume. It's an interactive platform where you can explore my projects, learn about my skill set, and understand the experiences that have shaped my career.
-
-🎨 Design: Design matters just as much as code. I inspired my design from old dark comics. Used Playground AI for creative and classy images. 
-
-🧰 Full-Stack Proficiency: As a full-stack developer, I've crafted engaging front-end interfaces using modern frameworks and built powerful back-ends to support these interfaces.
-
-🔗 Project Showcases: Discover the diversity of my projects, from web applications and responsive websites. Each project represents a unique challenge and an opportunity for growth.
-
-## Built with
-
-Next.js, 
-Framer motion, 
-TailwindCSS, 
-RadixUI
+Welcome to the Odinbook Frontend Project! Odinbook is a social media platform designed to showcase my front-end development skills while creating a user-friendly and engaging interface. Inspired by popular social networking sites, this project aims to demonstrate my ability to design and implement dynamic web applications using modern web technologies.
 
 
 
-## Performance
-
-![App Screenshot](https://i.imgur.com/rVmCTAR.png)
-## License
+  
+## Project Highlights
 
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+🌐 Connect and Interact: Odinbook allows users to create profiles, connect with friends, share posts, like and comment on content, and experience the essence of a social network.
 
+🎨 Design Consistency: Design aesthetics are key. I've strived to maintain visual consistency throughout the platform, incorporating intuitive navigation and modern UI components.
 
+📱 Responsive and Adaptive: Odinbook adapts seamlessly to different screen sizes, ensuring a consistent and pleasant user experience on various devices, from desktops to smartphones.
+
+🚀 Dynamic Components: From news feeds and user profiles to interactive posts and real-time notifications, the project showcases a variety of dynamic and interactive components.
+
+🛠️ Modern Stack: Built with modern front-end tools such as React, and CSS-in-JS libraries, the project emphasizes maintainability and scalability.
+
+  
+## Screenshot
+
+![Uygulama Ekran Görüntüsü](https://www.linkpicture.com/q/Odinbook.webp)
+
+  
+## Demo
+
+https://odinbook-client.vercel.app/login
+
+  
