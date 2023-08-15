@@ -29,7 +29,7 @@ export default function Principles() {
 
   useEffect(() => {
     if(isInView){
-      animate(".f", { opacity: 1, y:0 }, { delay: stagger(0.5, { startDelay:0.9 }) })
+      animate(".f", { opacity: 'var(--opacity-to)', y:'var(--y-to)' }, { delay: stagger(0.5, { startDelay:0.9 }) })
     }
     
   }, [isInView])
@@ -46,9 +46,9 @@ export default function Principles() {
             return(
                 <motion.div 
                   key={index} 
-                  ref={ref} 
-                  className='f'
-                  initial={{ opacity:0, y:50 }}                
+                  ref={ref}                   
+                  initial={{ opacity:'var(--opacity-from)', y:'var(--y-from)' }}
+                  className='f sm:[--opacity-from:0%] sm:[--opacity-to:100%] sm:[--y-from:-25%] sm:[--y-to:0%]'                
                 >
                   <Imgbox  index={index} item={item} />  
                 </motion.div>                

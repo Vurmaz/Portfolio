@@ -8,10 +8,11 @@ export default function MessageField({ setData, data }) {
     <>
         <Form.Field className='mt-8'>
             <motion.div
-                initial={{ y:50, opacity:0 }}
-                whileInView={{ y:0, opacity:1 }}
+                initial={{  y:'var(--y-from)', opacity:'var(--opacity-from)' }}
+                whileInView={{ y:'var(--y-to)', opacity:'var(--opacity-to)' }}
                 viewport={{ once: true }}
                 transition={{ duration:0.7, delay:0.3 }}
+                className='sm:[--y-from:25%] sm:[--y-to:0%] sm:[--opacity-from:0%] sm:[--opacity-to:100%]'                
             >
                 <div className='flex items-baseline justify-between text-xs'>
                     <Form.Label>Message</Form.Label>

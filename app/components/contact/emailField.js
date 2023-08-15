@@ -8,10 +8,11 @@ export default function EmailField({ setData, data }) {
     <>
         <Form.Field name='email' className='w-1/2'>
             <motion.div
-                initial={{ x:100, opacity:0 }}
-                whileInView={{ x: 0, opacity:1 }}
+                initial={{  x:'var(--x-from)', opacity:'var(--opacity-from)' }}
+                whileInView={{ x:'var(--x-to)', opacity:'var(--opacity-to)' }}
                 viewport={{ once:true }}
                 transition={{ delay:0.3, duration:0.7 }}
+                className='sm:[--x-from:50%] sm:[--x-to:0%] sm:[--opacity-from:0%] sm:[--opacity-to:100%]'
             >
                 <div className='flex items-baseline justify-between text-xs'>
                     <Form.Label>Email</Form.Label>

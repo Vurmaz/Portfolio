@@ -10,7 +10,7 @@ const isInView = useInView(ref, { once: true })
 
 useEffect(() => { 
   if(isInView){
-    animate(".fr", { x : 0, opacity:1 }, { delay: stagger(0.1, { startDelay:0.2 }), duration:0.9 })
+    animate(".fr", { x : 'var(--x-to)', opacity:'var(--opacity-to)' }, { delay: stagger(0.1, { startDelay:0.2 }), duration:0.9 })
   }
 }, [isInView])
 
@@ -23,8 +23,10 @@ useEffect(() => {
                     return (
                       <motion.div 
                         key={index}
-                        initial={{ x:-100, opacity:0 }}
-                        className='fr'                       
+                        initial={{ x:'var(--x-from)', opacity:'var(--opacity-from)' }}
+                        className='
+                          fr sm:[--x-from:-50%] sm:[--x-to:0] sm:[--opacity-from:0%] sm:[--opacity-to:100%]
+                        '                       
                       > 
                         <Tree item={item} />
                       </motion.div>

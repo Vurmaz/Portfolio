@@ -15,7 +15,7 @@ let y = useTransform(scrollYProgress, [0, 1], ['0', '31%'])
 
 useEffect(() => { 
   if(isInView){
-    animate(".mi", { x : 0, opacity:1 }, { delay: stagger(0.1, { startDelay:0.2 }), duration:0.9 })
+    animate(".mi", { x : 'var(--x-to)', opacity:'var(--opacity-to)' }, { delay: stagger(0.1, { startDelay:0.2 }), duration:0.9 })
   }
 }, [isInView])
 
@@ -28,8 +28,10 @@ useEffect(() => {
                   return (
                     <motion.div
                       key={item._id}
-                      initial={{ x:100, opacity:0 }}
-                      className='mi' 
+                      initial={{ x:'var(--x-from)', opacity:'var(--opacity-from)' }}
+                      className='
+                        mi sm:[--x-from:50%] sm:[--x-to:0] sm:[--opacity-from:0%] sm:[--opacity-to:100%]
+                      ' 
                     >
                       <Tree item={item} />  
                     </motion.div>

@@ -5,13 +5,17 @@ import { motion } from 'framer-motion'
 export default function AboutText() {
 
   return (
-    <div className=' w-1/2 mx-auto flex justify-center sm:w-1/2 w-8/12 mt-8'>
+    <div className=' w-full mx-auto flex justify-center sm:w-1/2 w-8/12 mt-8'>
       <motion.p  
-          className='text-xs sm:text-xs md:text-sm text-justify about-text p-4'
-          initial={{ opacity:0 }}
-          whileInView={{ opacity:1 }}
+         
+          initial={{ opacity:'var(--opacity-from)' }}
+          whileInView={{ opacity:'var(--opacity-to)' }}
           viewport={{ once: true }}       
-          transition={{ duration: 0.5, delay: 0.9 }}                                
+          transition={{ duration: 0.5, delay: 0.9 }}  
+          className='
+            text-xs sm:text-xs md:text-sm text-justify about-text p-4
+            sm:[--opacity-from:0%] sm:[--opacity-to:100%]
+          '                              
       >
         I am Sadık Vurmaz a determined and skilled Full-Stack Web Developer with 
         a strong foundation in front-end technologies like HTML, CSS, and JavaScript, 

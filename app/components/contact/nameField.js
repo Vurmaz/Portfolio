@@ -6,10 +6,11 @@ export default function NameField({ setData, data }) {
   return (        
         <Form.Field name='name' className='w-1/2'>
             <motion.div
-                initial={{ x:-100, opacity:0 }}
-                whileInView={{ x:0, opacity:1 }}
+                initial={{  x:'var(--x-from)', opacity:'var(--opacity-from)' }}
+                whileInView={{ x:'var(--x-to)', opacity:'var(--opacity-to)' }}
                 transition={{ duration:0.7, delay:0.3 }}
                 viewport={{ once:true }}
+                className='sm:[--x-from:-50%] sm:[--x-to:0%] sm:[--opacity-from:0%] sm:[--opacity-to:100%]'
             >
                 <div className='flex items-baseline justify-between text-xs'>
                     <Form.Label className=''>Name</Form.Label>
