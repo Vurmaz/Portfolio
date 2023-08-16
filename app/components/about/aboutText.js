@@ -25,7 +25,7 @@ export default function AboutText() {
         I began my education during the COVID pandemic and soon discovered that the internet is where I am most passionate. Then I made a hard decision and shifted from environmental engineering to web development.
         As a dedicated and independent learner, I found the Odin Project to be the ideal resource for my education in web programming. 
         After that, I am continuously enhancing my skills to keep up with the latest trends and best practices in web development.<br /><br />
-        Beside coding, I enjoy walking, reading books and mangas, playing video games, and role-playing games. Rock music, sci-fi, and dark fantasy are some of my favorite things.       
+        Beside coding, I enjoy walking, reading books and mangas, playing video games, and role-playing games. Rock music, sci-fi, dark fantasy worlds and football are some of my favorite things.       
       </motion.p>                 
     </div>
   )
