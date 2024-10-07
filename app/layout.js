@@ -3,8 +3,7 @@ import { Rajdhani } from 'next/font/google'
 
 const rajdhani = Rajdhani ({ 
   subsets: ['latin'],
-  weight:['400'],
-  style:['normal'] 
+  weight:['400'], 
 })
 
 export const metadata = {

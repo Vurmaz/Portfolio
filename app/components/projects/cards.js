@@ -3,7 +3,7 @@ import React from 'react'
 import Card from './card'
 
 const getProjects1 = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/project`,  { cache: 'no-store' })  
+    const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/project`)  
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }

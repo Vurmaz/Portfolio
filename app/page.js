@@ -17,7 +17,7 @@ export default function Home() {
       <main className='overflow-hidden h-auto main'>
         <div className='h-auto'>                     
             <Hero />     
-            <About />
+            <About  />
             <Projects />
             <Skills />           
             <Contact />                  

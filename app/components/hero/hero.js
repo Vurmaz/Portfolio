@@ -21,11 +21,11 @@ export default function Hero() {
                         whileInView={{ opacity:1 }}
                         viewport={{ once: true }}
                         transition={{ duration:0.5 , delay:0.3}}
-                        className='text-red text-3xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl font-bold'
+                        className='text-red text-3xl sm:text-2xl md:text-4xl lg:text-4xl xl:text-6xl font-semibold'
                     >
                         SADIK VURMAZ
                     </motion.h1>
-                    <motion.h1 
+                    <motion.h2 
                         initial={{ opacity:0 }}
                         whileInView={{ opacity:1 }}
                         viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function Hero() {
                         className='text-2xl sm:text-lg md:text-2xl lg:text-4xl xl:text-4xl text-white'
                     >
                         Full-Stack Web Developer
-                    </motion.h1>                  
+                    </motion.h2>                  
                 </div>
                 <motion.div 
                     initial={{ opacity:0 }}
